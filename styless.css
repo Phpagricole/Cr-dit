@@ -1,0 +1,347 @@
+:root {
+    --ca-green: #007953;
+    --ca-light-green: #e6f2ed;
+    --ca-yellow: #ffc726;
+    --ca-light-yellow: #fff9e6;
+    --ca-gray: #f2f2f2;
+    --ca-dark-gray: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--ca-dark-gray);
+    background-color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ca-green);
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+.main-content {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-hint {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+.security-banner {
+    background-color: var(--ca-green);
+    color: white;
+    padding: 2rem;
+    width: 100%;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--ca-green);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #005e3f;
+}
+
+.btn-primary:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.numeric-keypad {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.numeric-key {
+    padding: 0.75rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.numeric-key:hover {
+    background-color: var(--ca-gray);
+}
+
+.become-client {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-outline {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: white;
+    color: var(--ca-green);
+    border: 1px solid var(--ca-green);
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-outline:hover {
+    background-color: var(--ca-light-green);
+}
+
+.additional-info {
+    margin-top: 2rem;
+}
+
+.english-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--ca-green);
+    border-radius: 20px;
+    color: var(--ca-green);
+    text-decoration: none;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.english-button img {
+    margin-right: 0.5rem;
+    display: block;
+}
+
+.help-section {
+    margin-bottom: 1.5rem;
+}
+
+.help-section h2 {
+    font-size: 1rem;
+    margin-bottom:
+0.5rem;
+}
+
+.tutorial-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--ca-green);
+    border-radius: 20px;
+    color: var(--ca-green);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.tutorial-button svg {
+    margin-right: 0.5rem;
+}
+
+.contact-info {
+    margin-top: 1rem;
+}
+
+.phone-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.security-section {
+    margin-top: 1.5rem;
+}
+
+.link {
+    color: var(--ca-green);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.alert-box {
+    background-color: var(--ca-light-yellow);
+    border-left: 4px solid var(--ca-yellow);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.alert-box h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.alert-box h3 svg {
+    margin-right: 0.5rem;
+    color: var(--ca-yellow);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: var(--ca-gray);
+    }
+
+    .header {
+        background-color: white;
+    }
+
+    .security-banner {
+        background-color: var(--ca-green);
+        color: white;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .content-wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    .form-container {
+        flex: 1;
+        padding: 2rem;
+    }
+
+    .info-container {
+        flex: 1;
+        background-color: var(--ca-light-green);
+        padding: 2rem;
+    }
+
+    .security-banner h2 {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .security-banner h2 svg {
+        margin-right: 0.5rem;
+    }
+
+    .security-banner ul {
+        list-style-type: none;
+        padding-left: 1.5rem;
+    }
+
+    .security-banner li {
+        position: relative;
+        margin-bottom: 0.5rem;
+    }
+
+    .security-banner li::before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 0.5rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .security-banner .btn-white {
+        background-color: white;
+        color: var(--ca-green);
+        border: none;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        max-width: 100%;
+        margin: 1rem auto;
+        padding: 1rem 1rem;
+    }
+
+    .form-container,
+    .info-container {
+        padding: 1rem;
+    }
+}

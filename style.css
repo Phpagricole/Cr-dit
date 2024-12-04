@@ -1,0 +1,249 @@
+:root {
+    --ca-green: #007953;
+    --ca-light-green: #e6f2ed;
+    --ca-yellow: #ffc726;
+    --ca-light-yellow: #fff9e6;
+    --ca-gray: #f2f2f2;
+    --ca-dark-gray: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--ca-dark-gray);
+    background-color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ca-green);
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+.main-content {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+.clear-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.clear-button:hover {
+    color: var(--ca-green);
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--ca-green);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #005e3f;
+}
+
+.security-banner {
+    background-color: var(--ca-green);
+    color: white;
+    padding: 2rem;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.form-container {
+    flex: 1;
+    padding: 2rem;
+}
+
+.info-container {
+    flex: 1;
+    background-color: var(--ca-light-green);
+    padding: 2rem;
+}
+
+.alert-box {
+    background-color: var(--ca-light-yellow);
+    border-left: 4px solid var(--ca-yellow);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.alert-box h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.alert-box h3 svg {
+    margin-right: 0.5rem;
+    color: var(--ca-yellow);
+}
+
+.link {
+    color: var(--ca-green);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.help-section {
+    margin-bottom: 1.5rem;
+}
+
+.help-section h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tutorial-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--ca-green);
+    border-radius: 20px;
+    color: var(--ca-green);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.tutorial-button svg {
+    margin-right: 0.5rem;
+}
+
+.contact-info {
+    margin-top: 1rem;
+}
+
+.phone-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--ca-light-green);
+    border-top: 5px solid var(--ca-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success-message {
+    display: none;
+    background-color: var(--ca-light-green);
+    color: var(--ca-green);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: var(--ca-gray);
+    }
+
+    .header {
+        background-color: white;
+    }
+
+    .main-content {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .form-container,
+    .info-container {
+        padding: 1rem;
+    }
+}
+
